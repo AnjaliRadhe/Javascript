@@ -9,9 +9,18 @@ let myArrOfArrs = [
     ["Wendy", 43, true, false, null]
 ]
 
-myArrOfArrs.forEach(elem => {
-    elem.forEach(innerElem => console.log(innerElem))
-})
+// ARRAY OF NUMBER ARRAYS
+let myArrOfNumArrs = [
+    [23, 44, 11, 47, 25],
+    [76, 42, 12, 74, 19],
+    [8, 41, 14, 82, 42],
+    [24, 43, 17, 85, 85]
+]
+
+// 2D ITERATOR
+// myArrOfArrs.forEach(elem => {
+//     elem.forEach(innerElem => console.log(innerElem))
+// })
 
 // OBJECT
 let myOBJ = {
@@ -73,3 +82,10 @@ myArrOBJS.map((elem, index) => {
     return elem
 })
 
+
+let thisAmount = myArrOfNumArrs[1].reduce((a,b)=> {
+    console.log(a+b)
+    return a+b
+})
+
+console.log(thisAmount)
